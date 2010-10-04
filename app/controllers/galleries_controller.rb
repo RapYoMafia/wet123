@@ -7,6 +7,19 @@ class GalleriesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @galleries }
+      # IPHONE VIEW INDEX
+      format.json do
+        result= Array.new
+        @galleries.each do |gallery|
+          hash = Hash.new
+          hash[:title] = gallery.title
+          hash[:date] = gallery.date
+          hash[:thumbnail] = gallery.gallery_items[0].image.url(:iphone_thumb)
+          hash[:id] = gallery.id
+          result.push hash
+        end
+        render :json => result.to_json
+      end
     end
   end
 
@@ -18,6 +31,10 @@ class GalleriesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @gallery }
+      # IPHONE VIEW
+      format.json {
+        # @galleries
+      }
     end
   end
 

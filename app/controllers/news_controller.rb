@@ -7,6 +7,25 @@ class NewsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @news }
+      
+      # IPHONE VIEW INDEX
+      format.json do
+        result_hash= Array.new
+        @news.each do |news|
+          hash = Hash.new
+          hash[:title] = news.title
+          hash[:category] = news.news_category.name.upcase
+          hash[:date] = news.date
+          hash[:thumbnail] = news.news.url(:iphone_thumb)
+          hash[:image] = news.news.url(:iphone)
+          hash[:id] = news.id
+          result_hash.push hash
+        end
+        render :json => result_hash.to_json
+      end
+      
+      
+      
     end
   end
 
@@ -21,6 +40,15 @@ class NewsController < ApplicationController
     end
   end
 
+  def news_ajax
+    @news = News.find(params[:id])
+    
+    respond_to do |format|
+      format.html {render :template => "news/show_ajax", :layout => false}
+    end
+  end
+  
+  
   # GET /news/new
   # GET /news/new.xml
   def new

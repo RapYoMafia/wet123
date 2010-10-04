@@ -22,7 +22,6 @@
 (function ($) {
   if ($.jQTouch) {
     $.jQTouch.addExtension(function bars(jQT) {
-
       var sheet = document.styleSheets[document.styleSheets.length - 1],
         init_tabbar, init_toolbar;
 
@@ -117,7 +116,7 @@
         // End isLoaded()
 
         // Begin getPath()
-        getPath = function () {
+        getPath = function (){
           var path;
           $('script').each(function () {
             path = $(this).attr('src');

@@ -327,6 +327,10 @@
                     animation: animation,
                     callback: function() {
                         $el.removeClass('loading'); setTimeout($.fn.unselect, 250, $el);
+                        // DGM MOD : add callback to ajax page loading
+                        if(options.onAjaxPageLoaded){
+                          options.onAjaxPageLoaded();
+                        }
                     },
                     $referrer: $el
                 });

@@ -2,8 +2,8 @@
 
 <table>
   <tr>
+    <th>Preview</th>
     <th>Gallery</th>
-    <th>Description</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,8 +11,8 @@
 
 <% @gallery_items.each do |gallery_item| %>
   <tr>
+    <td><%= image_tag gallery_item.image.url(:iphone_thumb) %></td>
     <td><%= gallery_item.gallery.title%></td>
-    <td><%= gallery_item.description %></td>
     <td><%= link_to 'Show', gallery_item %></td>
     <td><%= link_to 'Edit', edit_gallery_item_path(gallery_item) %></td>
     <td><%= link_to 'Destroy', gallery_item, :confirm => 'Are you sure?', :method => :delete %></td>

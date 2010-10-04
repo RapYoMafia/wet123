@@ -18,7 +18,7 @@
 
 <% @news.each do |news| %>
   <tr>
-    <td><%= image_tag news.news.url(:thumb) %></td>
+    <td><%= image_tag news.news.url(:iphone_thumb) %></td>
     <td><%= news.title %></td>
     <td><%= news.try("news_category").try "name" %></td>
     <td><%= news.date %></td>

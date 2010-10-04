@@ -101,15 +101,8 @@ img{
 }
 
 
-
-
-
-
-
-
-
 .wallpaper_list li{
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e4e4e4;
   padding: 0px !important;
 }
 
@@ -121,7 +114,7 @@ img{
 }
 
 
-.wallpaper_list li a.active{
+.wallpaper_list li a.active, .wallpaper_list li a:active{
   padding: 0 12px 0 0 !important;
   background: #ddd !important;
 }

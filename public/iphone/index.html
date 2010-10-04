@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>
+      Wallpaper
+    </title>
+    <style media='screen' type='text/css'>
+      @import "/iphone/jqtouch/jqtouch/jqtouch.css";
+    </style>
+    <style media='screen' type='text/css'>
+      @import "/iphone/jqtouch/themes/jqt/theme.css";
+    </style>
+    <style media='screen' type='text/css'>
+      @import "/iphone/jqtouch/mobile.css";
+    </style>
+    <style media='screen' type='text/css'>
+      @import "/iphone/jqtouch/extensions/jqt.photo.css";
+    </style>
+    <style type="text/css" media="screen">@import "/iphone/jqtouch/extensions/jqt.bars/jqt.bars.css";</style>
+    <style type="text/css" media="screen">@import "/iphone/jqtouch/extensions/jqt.bars/themes/jqt/theme.css";</style>
+    <script charset='utf-8' src='/iphone/jqtouch/jqtouch/jquery-1.4.2.min.js' type='text/javascript'></script>
+    <script charset='utf-8' src='/iphone/jqtouch/jqtouch/jqtouch.js' type='application/x-javascript'></script>
+    <script charset='utf-8' src='/iphone/jqtouch/extensions/jqt.photo.js' type='application/x-javascript'></script>
+    <script charset='utf-8' src='/iphone/jqtouch/extensions/jqt.floaty.js' type='application/x-javascript'></script>
+    <script charset='utf-8' src='/iphone/jqtouch/mobile.js' type='text/javascript'></script>
+    <script src="/iphone/jqtouch/extensions/jqt.bars/jqt.bars.js" type="application/x-javascript" charset="utf-8"></script>
+    <script src="/iphone/jqtouch/extensions/jqt.iscroll/jqt.iscroll.js" type="application/x-javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    $(function(){
+      if($("body").hasClass("fullscreen")){
+      addEventListener('load', function() { setTimeout(function(){window.scrollTo(0, 1)}, 0); }, false);
+      setTimeout(function(){
+        $('.floaty').makeFloaty({
+            spacing: 20,
+            time: '1.2s'
+        });
+      $('#floaty_close').click(function(){
+          $('.floaty').hideFloaty();
+          $(this).removeClass('active');
+          return false;
+      });
+      }, 1000);
+      }
+    });
+
+    </script>
+
+    <div id="tabbar">
+      <table class="six">
+        <tr>
+          <td>
+            <a href="#news" mask="/iphone/images/news.png">
+              <strong>News</strong>
+            </a>
+          </td>
+          <td>
+            <a href="#gallery" mask="/iphone/images/gallery.png">
+              <strong>Gallery</strong>
+              <!-- <small class="badge right">5</small> -->
+            </a>
+          </td>
+          <td>
+            <a href="#features" mask="/iphone/images/features.png">
+              <strong>Features</strong>
+              <!-- <small class="badge right">8</small> -->
+            </a>
+          </td>
+          <td>
+            <a href="#favourites" mask="/iphone/images/favourites.png">
+              <strong>Favourites</strong>
+              <!-- <small class="badge right">4</small> -->
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+	<div id="jqt">
+    <div id='news' class="current s-pane selectable">
+        <div class="toolbar">
+          <h1><img src="/iphone/images/logo.png" alt="" /></h1>
+        </div>
+        
+				<div id="news-wrapper" class="s-scrollwrapper">
+				  <div id="news-pane" class="s-scrollpane">
+				    <ul id="news_list" class="wallpaper_list">
+              <li><a class="slide" href="#article">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>    
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>    
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>    
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+				    </ul>
+				  </div>
+				</div>
+    </div>
+    
+    
+    
+    <div id='gallery' class="current s-pane selectable">
+        <div class="toolbar">
+          <h1><img src="/iphone/images/logo.png" alt="" /></h1>
+        </div>
+        
+				<div id="gallery-wrapper" class="s-scrollwrapper">
+				  <div id="gallery-pane" class="s-scrollpane">
+				    <ul id="gallery_list" class="wallpaper_list">
+              <li><a href="#gallery_1" class="slide">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="#gallery_1" class="slide">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+              <li><a href="">
+                  <img src="/iphone/images/image.png" alt="" />
+                  <h4>Visual Editions launches its first book</h4>
+                  <span>LIFESTYLE | 29 SEPTEMBER 2010</span></a>
+              </li>
+				    </ul>
+				  </div>
+				</div>
+    </div>
+    
+    
+    
+    <div id='article' class="current s-pane selectable">
+        <div class="toolbar">
+          <a href="#" class="back">News</a>
+          <h1><img src="/iphone/images/logo.png" alt="" /></h1>
+        </div>
+        
+				<div id="article-wrapper" class="s-scrollwrapper">
+				  <div id="article-pane" class="s-scrollpane">
+            <div class="article">
+              <h2>Visual Editions launches its first book</h2>
+              <img src="http://www.wallpaper.com/images/98_viseditions_ef270910_a.jpg" alt="" class="article_image" />
+              <p class="article_caption">Visual Editions has breathed new life into Laurence Sterne's 18th-century novel, in collaboration with graphic studio, A Practice For Everyday Life</p>
+              <div class="content">
+                <p>'With most experiences in life now, we expect more and more,' says Britt Iversen, co-founder of new London-based publishing house Visual Editions. 'So why not with books?' As she proves with the company's first tome - a new edition of Laurence Sterne's 'The Life and Opinions of Tristram Shandy, Gentleman' - the traditional reading medium has not lost its capacity to surprise.</p>
+
+                <p>At the axis of Visual Editions is a belief in 'visual writing'. It is via this approach - which the company takes to both fiction and non-fiction - that Sterne's 18th-century novel shakes off its Dover Classics image and emerges refreshed for a 21st-century readership.</p>
+                <p>Visual Editions approached A Practice For Everyday Life, a London-based graphic design studio that has taken commissions from the likes of FAT architects and the Tate, with one clear instruction: to stay faithful to Sterne's playful spirit. That aside, the designers were given free reign to create a book that remains elegant and visually beautiful amidst the pervading liveliness - which is backed up by a suitably irreverent forward from Will Self.</p>
+                <p>That Iversen and Visual Editions co-founder Anna Gerber bonded six years ago over a shared love of colour is self-evident; the book is shot through with an arresting shade of orange. 'Anna has been teaching design for ten years, currently at the London College of Communication,' Iversen explains. 'When we met, we quickly discovered our devotion to colour.' Meanwhile, Iversen herself works at advertising agency, Mother, now in her ninth year, and so brings a 'broader, more poppy' experience to the table.</p>
+                <p>The central tenet of Visual Editions is that aesthetic additions should never be extraneous or gimmicky; rather they should reinforce and help deliver a narrative. Visual devices range from using photography, die-cuts and even blank pages. In the new edition of Tristram Shandy, a shut door is represented by a folded down page, and perspiration is depicted using a marbled black-and-white photograph in a feat of ocular onomatopoeia.</p>
+              </div>
+              <span class="article_date">
+                29 SEPTEMBER 2010
+              </span>
+              
+            </div>
+				  </div>
+				</div>
+    </div>
+    
+    
+
+    <div id='gallery_1' class="current s-pane selectable">
+        <div class="toolbar">
+          <a href="#" class="back">Gallery</a>
+          <h1><img src="/iphone/images/logo.png" alt="" /></h1>
+        </div>
+        
+				<div id="gallery_1-wrapper" class="s-scrollwrapper">
+				  <div id="gallery_1-pane" class="s-scrollpane">
+            <ul class="photo_gallery">
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+              <li><a href="#"><img src="/iphone/images/thumb.png" alt="" /></a></li>
+            </ul>
+            <span class="clear">&nbsp;</span>
+				  </div>
+				</div>
+    </div>
+    
+    
+    <div class="floaty" style="">
+      <div id="floaty_icon"></div>
+      <div style="margin-top: 15px;">Install this demo on your iPhone: <br />Tap <b style="font-size:15px">+</b> and then <b>'Add to Home Screen'</b></div>
+      <div id="floaty_arrow"></div>
+      <a id="floaty_close">&nbsp;</a>
+    </div>
+		
+		
+	</div>
+  </body>
+</html>

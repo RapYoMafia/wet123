@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100930071044) do
+ActiveRecord::Schema.define(:version => 20101004082440) do
 
   create_table "favorites", :force => true do |t|
     t.integer  "user_id"
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20100930071044) do
     t.string   "news_file_name"
     t.string   "news_content_type"
     t.integer  "news_file_size"
+    t.text     "by"
+    t.text     "subtitle"
+    t.text     "metadata"
   end
 
   create_table "news_categories", :force => true do |t|

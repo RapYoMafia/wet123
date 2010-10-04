@@ -93,5 +93,17 @@ class FavoritesController < ApplicationController
  end
 
 
+def filter
+  @favorite = Favorite.where(:user_id => params[:id])
+  # @user_id = params[:user_id]
+  # @news_id = params[:news_id]
+  # Favorite.create(:user_id => @user_id, :news_id =>@news_id )
+
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @favorite }
+      format.json  { render :json => @favorite }
+    end
+end
 
 end

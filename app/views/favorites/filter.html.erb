@@ -1,3 +1,5 @@
+<p> User id : <%=@favorite%> </p> 
+
 <h1>Listing favorites</h1>
 
 <table>
@@ -9,7 +11,7 @@
     <th></th>
   </tr>
 
-<% @favorites.each do |favorite| %>
+<% @favorite.each do |favorite| %>
   <tr>
     <td><%= favorite.user.name %></td>
     <td><%= favorite.news.title %></td>
@@ -23,7 +25,3 @@
 <br />
 
 <%= link_to 'New Favorite', new_favorite_path %>
-
-<br />
-<br />
-<a href="http://localhost:3000/">Back</a>

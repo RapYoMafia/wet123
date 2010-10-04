@@ -1,0 +1,17 @@
+<%= semantic_form_for @news, :html => { :multipart => true } do |f| %>
+
+<%f.inputs do%>
+<%= f.input :title %>
+<%= f.input :news_category, :include_blank => false%>
+<%= f.input :text %>
+<%=f.input  :date ,:start_year => 2010%>
+
+
+<%= f.file_field :news%>
+<% end %>
+
+<%= f.buttons %>
+
+
+
+<% end %>

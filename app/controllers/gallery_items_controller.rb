@@ -80,4 +80,16 @@ class GalleryItemsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+
+  def filter
+    @gallery_items = GalleryItem.where(:gallery_id =>params[:id])
+
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @gallery_item }
+    end
+end
+
+
 end

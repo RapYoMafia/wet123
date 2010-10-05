@@ -325,11 +325,11 @@
                 $el.addClass('loading active');
                 showPageByHref($el.attr('href'), {
                     animation: animation,
-                    callback: function() {
+                    callback: function(element) {
                         $el.removeClass('loading'); setTimeout($.fn.unselect, 250, $el);
                         // DGM MOD : add callback to ajax page loading
                         if(options.onAjaxPageLoaded){
-                          options.onAjaxPageLoaded();
+                          options.onAjaxPageLoaded(element);
                         }
                     },
                     $referrer: $el
@@ -491,7 +491,7 @@
                                 settings.$referrer.attr('href', '#' + firstPage.attr('id'));
                             }
                             if (settings.callback) {
-                                settings.callback(true);
+                                settings.callback(firstPage.attr('id'));
                             }
                         }
                     },

@@ -5,10 +5,16 @@ var jQT = new $.jQTouch({
   preloadImages:[
   ],
   fullScreenClass: "fullscreen",
-  onAjaxPageLoaded: function(){
+  onAjaxPageLoaded: function(element){
     // for article
     jQT.init_iScroll();
     
+    // for gallery
+    if(element.match(/gallery[0-9]+/)){
+      $(element + " .photo_gallery a").each(function(){
+        alert($(this).html());
+      })
+    }
   },
   useFastTouch: true
 });

@@ -28,6 +28,7 @@ Wallpaper::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   match 'news_ajax/:id' => 'news#news_ajax'
+  match 'gallery_ajax/:id' => 'galleries#gallery_ajax'
   # Sample resource route with options:
   #   resources :products do
   #     member do

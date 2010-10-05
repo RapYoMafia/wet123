@@ -31,10 +31,28 @@ class GalleriesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @gallery }
-      # IPHONE VIEW
-      format.json {
-        # @galleries
-      }
+      
+      # IPHONE VIEW (UNUSED)
+      # format.json do
+      #   # @galleries
+      #   result= Array.new
+      #   @gallery.gallery_items.each do |item|
+      #     hash = Hash.new
+      #     hash[:item_id] = item.id
+      #     hash[:thumbnail] = item.image.url(:iphone_thumb)
+      #     result.push item
+      #   end
+      #   render :json => result.to_json
+      # end
+    end
+  end
+
+
+  def gallery_ajax
+    @gallery = Gallery.find(params[:id])
+    
+    respond_to do |format|
+      format.html {render :template => "galleries/show_ajax", :layout => false}
     end
   end
 

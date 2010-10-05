@@ -180,7 +180,8 @@ img{
 
 .article .article_date{
   display: block;
-  font-size: 10px;
+  font-size: 12px;
+  line-height: 17px;
   color: #888;
   padding-bottom: 45px !important;
   padding-top: 7px;

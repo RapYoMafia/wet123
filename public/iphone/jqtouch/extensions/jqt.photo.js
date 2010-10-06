@@ -774,9 +774,11 @@
 				 *    @param Boolean reverse
 				 *    @return jQuery
 				 */
-				goToSlide: function goToSlide (gallery, index, animation, reverse) {
+				goToSlide: function goToSlide(gallery, index, animation, reverse) {
 					//trigger this first
-					var g = $(gallery), options = g.data("jqt-photo-options"),slides = g.find(options.slideSelector);
+					var g = $(gallery);
+					var options = g.data("jqt-photo-options");
+					var slides = g.find(options.slideSelector);
 					 
 					if (slides.index("."+options.currentClass) != index) {
 						slides.removeClass(options.currentClass).eq(index).addClass(options.currentClass);
@@ -921,10 +923,8 @@
             images = slides.find(options.imageSelector);
         
         options.list = $elem.find(options.listSelector);
-        
         options.table = tableData($elem.data("jqt-photo-options", options), options);
-		
-		options.blankImage = parseImageData($elem, $(options.blankImage).load(options.loader), options);
+		    options.blankImage = parseImageData($elem, $(options.blankImage).load(options.loader), options);
         
         if (!slides.filter("."+options.currentClass).length) {
             if (!slides.filter(format("[{0}={1}]", options.dataAttribute, options.defaultIndex)).addClass(options.currentClass).length) {

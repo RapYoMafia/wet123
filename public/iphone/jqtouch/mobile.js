@@ -5,14 +5,27 @@ var jQT = new $.jQTouch({
   preloadImages:[
   ],
   fullScreenClass: "fullscreen",
+  // slideSelector : "slide",
   onAjaxPageLoaded: function(element){
     // for article
     jQT.init_iScroll();
     
     // for gallery
     if(element.match(/gallery[0-9]+/)){
-      $(element + " .photo_gallery a").each(function(){
-        alert($(this).html());
+      
+      //GENERATE GALLERY
+      var gallery_id = element.replace("gallery","");
+
+      var gallery_element_id = "photos" + gallery_id
+      
+      
+      load_gallery(gallery_id);
+      $("#" + element + " .photo_gallery a").each(function(){
+        $(this).click(function(){
+          // GO TO PICTURE
+          jQT.goToSlide("#" + gallery_element_id + "", 1);
+          return false;
+        })
       })
     }
   },
@@ -28,7 +41,26 @@ var jQT = new $.jQTouch({
 //      {src:"/demos/heineken/images/happening_2/5.jpg"}
 //     ]);
 // });
-// 
+//
+
+
+/*
+$.getJSON( "/news.json", function(data){
+  for(i=0;i<data.length; i++){
+    object = data[i];
+    message_string = "<li><a class='slide' href=\"" + "/news_ajax/" + object.id + "\"><img src=\"" + object.thumbnail + "\" alt=\"\" /><h4>" + object.title + "</h4><span>" + object.category + " | " + object.date + "</span></a></li>"
+    $('#news_list').append(message_string);
+  }
+});
+*/
+
+
+function load_gallery(id){
+  $.getJSON( "/galleries/" + id + ".json", function(data){
+      jQT.generateGallery("photos" + id, data);
+  });
+}
+
 
 jQuery(function(){
   // Add custom handler code here.
@@ -37,7 +69,6 @@ jQuery(function(){
   // });
   // $("#your_message").bind("focus", {}, setTextareaState);
   //$("#gallery").bind("pageAnimationEndz", {}, function(alert(1)));
-  
   display_lists();
 });
 

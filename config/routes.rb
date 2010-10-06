@@ -19,6 +19,8 @@ Wallpaper::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
 
  match 'favorites_for_user/:id' => 'favorites#filter'
+
+match 'filter_gallery_items/:id' => 'gallery_items#filter'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

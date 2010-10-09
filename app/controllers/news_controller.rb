@@ -11,13 +11,17 @@ class NewsController < ApplicationController
       # IPHONE VIEW INDEX
       format.json do
         result_hash= Array.new
-        @news.each do |news|
+        0.upto(@news.size() -1) do |news_id|
+          news = @news[news_id]
           hash = Hash.new
           hash[:title] = news.title
           hash[:category] = news.news_category.name.upcase
           hash[:date] = news.date
-          hash[:thumbnail] = news.news.url(:iphone_thumb)
-          hash[:image] = news.news.url(:iphone)
+          if news_id == 0
+            hash[:thumbnail] = news.news.url(:iphone)
+          else
+            hash[:thumbnail] = news.news.url(:iphone_thumb)
+          end
           hash[:id] = news.id
           result_hash.push hash
         end

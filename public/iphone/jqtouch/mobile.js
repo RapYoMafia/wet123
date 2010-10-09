@@ -78,7 +78,7 @@ function display_lists(){
   $.getJSON( "/news.json", function(data){
     for(i=0;i<data.length; i++){
       object = data[i];
-      message_string = "<li><a class='slide' href=\"" + "/news_ajax/" + object.id + "\"><img src=\"" + object.thumbnail + "\" alt=\"\" /><h4>" + object.title + "</h4><span>" + object.category + " | " + object.date + "</span></a></li>"
+      message_string = "<li><a class='slide' href=\"" + "/news_ajax/" + object.id + "\"><img src=\"" + object.thumbnail + "\" alt=\"\" /><div><h4>" + object.title + "</h4><span>" + object.category + " | " + object.date + "</span></div></a></li>"
       $('#news_list').append(message_string);
     }
   });

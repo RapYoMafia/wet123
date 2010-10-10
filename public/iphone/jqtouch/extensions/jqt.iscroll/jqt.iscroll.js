@@ -130,8 +130,8 @@ variable name for jQT in the jqt.iscroll function calls.
         $page.each(function () {
           var scroll = new iScroll($('.s-scrollpane', this).attr('id'), {
             hScrollbar: false,
-            vScrollbar: false,
-            checkDOMChanges: false,
+            vScrollbar: true,
+            checkDOMChanges: true,
             desktopCompatibility: true,
             snap: false,
             // DGM MOD - Disabled bouncing

@@ -233,6 +233,9 @@ ul.photo_gallery li a img{
   border-top: none;
 }
 
+#news_list li:first-child img{
+  height:206px;
+}
 
 .category_link{
   border-top: 1px solid #aaa !important;
@@ -244,7 +247,6 @@ ul.photo_gallery li a img{
   font-size: 12px !important;
   margin-top: 10px;
 }
-
 
 a.favourite{
   background: url("/iphone/images/fav.png") no-repeat;

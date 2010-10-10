@@ -1,7 +1,8 @@
-<div id='gallery<%= @gallery.id %>' class="s-pane selectable gallery">
+<div id='gallery<%= @gallery.id %>' class="s-pane selectable gallery" unique_uri="<%= request.env['REQUEST_URI'] %>">
     <div class="toolbar">
       <a href="#" class="back">Gallery</a>
       <h1><img src="/iphone/images/logo.png" alt="" /></h1>
+      <a href='#' onclick="add_to_fav(); return false;" class='favourite' rel="external">Fav</a>
     </div>
     
 		<div id="gallery<%= @gallery.id %>-wrapper" class="s-scrollwrapper">

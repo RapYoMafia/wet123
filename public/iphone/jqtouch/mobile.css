@@ -12,7 +12,9 @@ body{
   background: url("/iphone/images/toolbar_gradient.png") repeat-x;
 }
 
-
+p{
+  -webkit-user-select: none;
+}
 
 .fullscreen .floaty{
   display: none !important;
@@ -233,8 +235,8 @@ ul.photo_gallery li a img{
 
 
 .category_link{
-  border-top: 1px solid #888 !important;
-  border-bottom: solid 1px #888 !important;
+  border-top: 1px solid #aaa !important;
+  border-bottom: solid 1px #aaa !important;
   color: #9E1511 !important;
   padding: 8px 0;
   font-weight: bold;
